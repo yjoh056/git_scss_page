@@ -1,0 +1,54 @@
+footer {
+    color: $color-gray-light;
+    background-color: $color-blue-dark;
+    padding: 9rem 7rem 3rem 7rem;
+    display: flex;
+
+    @include mq('sm') {
+        padding: 9rem 2rem 3rem 7rem;
+    }
+
+    .logo-text-footer {
+        width: 25%;
+
+        font: {
+            size: 4rem;
+            family: 'Lato', sans-serif;
+            weight: 100;
+        }
+
+        text-transform: uppercase;
+
+        @include mq('sm') {
+            margin-right: 6rem;
+            width: 20%;
+        }
+    }
+
+    //.logo-text-footer
+    .copyright {
+        width: 75%;
+        font-size: 1.2rem;
+
+        @include mq('small-screen-3') {
+            width: 60%;
+        }
+
+        p:nth-child(1) {
+            margin-bottom: 2rem;
+            word-break: break-all;
+            text-align: justify;
+
+            column: {
+                count: 3; //단갯수
+                gap: 3rem; //단여백
+                rule-style: dashed; //구분선 모양
+                rule-width: 1px;
+                rule-color: #888;
+                width: 1rem;
+            }
+        }
+    }
+}
+
+//footer
