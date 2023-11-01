@@ -207,10 +207,27 @@ h3 {
 header {
   width: 100%;
   height: 90vh;
+  position: relative;
   background-image: linear-gradient(180deg, #c1b7ff 0%, #ffdbec 100%), url(../images/header-image.jpg);
   background-blend-mode: hard-light;
   background-size: cover;
-  position: relative;
+  background-position-x: center;
+}
+header img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  header img {
+    height: 600px;
+    transform: translateX(-25%);
+  }
+}
+@media screen and (max-width: 700px) {
+  header img {
+    height: 300px;
+    transform: translateX(-50%);
+  }
 }
 header .logo-text {
   position: absolute;
@@ -228,13 +245,43 @@ header .logo-text {
   animation-delay: 2s;
   animation-full-mode: backwards;
 }
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  header .logo-text {
+    font-size: 5rem;
+    top: 2rem;
+    left: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  header .logo-text {
+    font-size: 4rem;
+    font-weight: 400;
+    top: 5rem;
+    left: 4rem;
+  }
+}
 header .header-text {
+  padding-top: 3rem;
   position: absolute;
   left: 7rem;
-  bottom: 23%;
+  bottom: 15%;
   color: #fff;
   letter-spacing: -0.1rem;
   font-weight: 700;
+}
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  header .header-text {
+    left: 2rem;
+    bottom: 10%;
+  }
+}
+@media screen and (max-width: 700px) {
+  header .header-text {
+    left: 3rem;
+    bottom: 5%;
+    font-size: 4rem;
+    font-weight: 400;
+  }
 }
 header .header-text-main {
   font-size: 7.2rem;
@@ -245,6 +292,12 @@ header .header-text-main {
   animation-delay: 1s;
   animation-full-mode: backwards;
 }
+@media screen and (max-width: 700px) {
+  header .header-text-main {
+    font-size: 5rem;
+    font-weight: 800;
+  }
+}
 header .header-text-sub {
   font-size: 2.4rem;
   line-height: 3rem;
@@ -252,6 +305,18 @@ header .header-text-sub {
   animation-duration: 1s;
   animation-delay: 1.5s;
   animation-full-mode: backwards;
+}
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  header .header-text-sub {
+    color: #382943;
+  }
+}
+@media screen and (max-width: 700px) {
+  header .header-text-sub {
+    padding-top: 2rem;
+    color: #333;
+    width: 90%;
+  }
 }
 
 main {
